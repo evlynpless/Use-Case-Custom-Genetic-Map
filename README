@@ -1,0 +1,14 @@
+Use case for custom genetic maps
+
+Summary:
+
+Recombination maps shows the rate of recombination (i.e. crossover events) across the genome and may differ by population. Gerald Van Eeden and colleagues created an LD-based recombination map for the Nama, an indigenous population of southern Africa. Due to unique demographic history, the Nama recombination map may differ at fine scales as opposed to maps inferred for other populations. We wanted to know how custom recombination maps affect downstream analysis, so I compared selection scan results generated with the custom map with those generated using a standard recombination map (the combined Phase II HapMap recombination map).
+
+The related manuscript is in review at Genome Biology.
+
+Scripts:
+
+sc01_Selscan_Nama performs selection scans on the Nama using the custom genetic map and standard reference genetic map. Specifically, it calculates the normalized integrated haplotype scores (iHS; Voight et al 2006) using the program Selscan (Szpiech et al 2014).
+
+sc02_ProcessSelscan combines iHS scores across chromosomes in preparation for further analysis.
+
